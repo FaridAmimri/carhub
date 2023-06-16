@@ -7,7 +7,13 @@ import CustomButton from './CustomButton'
 import { CustomButtonProps } from '@/types'
 
 const Hero = ({ title, containerStyles, handleClick }: CustomButtonProps) => {
-  const handleScroll = () => {}
+  const handleScroll = () => {
+    const nextSection = document.getElementById('discover')
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <div className='hero'>
